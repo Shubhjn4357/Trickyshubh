@@ -79,7 +79,7 @@
 								</contact>
 								<contact id="feedback">
 											<h1>Feedback</h1>
-												<form method="POST" autocomplete="off">
+												<form method="POST" autocomplete="off" action="contact-form-submission.php">
 																	<input type="text" name="name" id="name" placeholder="Type Your Name" required>
 																	<input type="email" name="email" id="email" placeholder="Type Your Mail" required>
 																	<input type="number" name="number" id="number" placeholder="Number...." required>
@@ -88,23 +88,6 @@
 												</form>
 								</contact>
 			</contactbox>
-<script>
-<?php
-$name= $_POST['name'];
-$email= $_POST['email'];
-$number= $_POST['number'];
-$msg= $_POST['msg'];
-$data=fopen("contact-form-data.txt","a");
 
-if($_POST['name'])
-{	fwrite($data,"\n------------------------------------------\n| Index    |  value  \n|----------|------------------------------\n| Name    :|  ".$name."\n| E-mail  :|  ".$email."\n| Number  :|  ".$number."\n| Message :|  ".$msg."\n------------------------------------------\n");
-				fclose($data);
-}
-else
-{
-				echo"script Error";
-				}
-?>  
-</script>
 </body>
 </html>
