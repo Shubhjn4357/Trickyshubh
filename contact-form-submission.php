@@ -1,8 +1,3 @@
-<!DOCTYPE html >
-<title>Tricky shubh</title>
-<head>
-<script src="https://kit.fontawesome.com/acc6278257.js" ></script>
-<script>
 <?php
 $name= $_POST['name'];
 $email= $_POST['email'];
@@ -19,7 +14,10 @@ else
 				echo"script Error";
 				}
 ?> 
-</script>
+<!DOCTYPE html >
+<title>Tricky shubh</title>
+<head>
+<script src="https://kit.fontawesome.com/acc6278257.js" ></script>
 <link rel="stylesheet" type ="text/css" href="main.css"> 
 </head>
 <body>
