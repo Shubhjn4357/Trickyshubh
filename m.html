@@ -1,0 +1,107 @@
+<!DOCTYPE html >
+<html>
+<title>
+Calculater 
+</title>
+<head>
+<!-- jQuery library -->
+<script  src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<style>
+				*{
+								margin:none;
+								box-sizing:border-box ;
+								padding:none;
+				}
+				div{
+				display :flex;
+				justify-content :center;
+				align-items:center ;
+				flex-direction :column;
+				background:#40a1ff;
+				padding:30px;
+				box-shadow :0 5px 10px #727269;
+				} 
+				input{
+								width:80%;
+								margin:10px;
+								height:30px;
+								background:#ffb200;
+								color:#000000;
+								border-radius:30px;
+								padding:20px;
+								font-weight:bolder;
+								font-size:20px;
+								outline:none;
+				}
+				button{
+								width:100px;
+								height:50px;
+								background:#11c97f;
+								color:#000000;
+								border-radius:30px;
+								padding:5px;
+								font-weight:bolder;
+								font-size:20px;
+								outline:none;
+				} 
+				label,label1,label2{
+				width:100px;
+				height:50px;
+				background:#ffb200;
+								color:#000000;
+								border-radius:30px;
+								padding:15px;
+								font-weight:bolder;
+								font-size:20px;} 
+				sec{
+				margin:10px;
+				background:#ff8955;
+								color:#000000;
+								border-radius:30px;
+								padding:15px;
+								font-weight:bolder;
+								font-size:20px;
+				}
+				total,less{
+								margin-right:10px;
+				}
+@media(max-width:768px){
+				label,label1,label2{
+				width:50px;
+				height:25px;
+				font-size:10px;
+				padding:5px;}
+				sec{font-size:10px;
+				padding:5px;}
+}
+</style>
+<body>
+				<div>
+								<input type="number" class="num1">
+								<input type="number" class="num2">
+								<button>Submit</button>
+								<sec>Percentage:  <label>AMT</label>%</sec>
+								<sec><total>Total Amt:   <label1>Total</label1></total>
+								<less>Subtracted Amt:   <label2>subs</label2></less></sec>
+				</div>
+<script>
+				$(document).ready(function(){
+								
+										$("button").click(function(){
+												var num1=$(".num1").val();
+												var num2=$(".num2").val();
+														try{
+																	var percentage=num1*num2/100;	
+															$("label").text(percentage);
+															$("label1").text(-(-num1-percentage));
+															$("label2").text(num1-percentage);
+														}
+														catch{
+																	$("label").text("wrong entry");
+														}
+										});
+				});
+</script>
+</body>
+</html>
